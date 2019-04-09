@@ -127,7 +127,45 @@ response:
 ### 章节列表
 
 ```json
+url: api.zhuishushenqi.com/mix-toc/书源ID?view=chapters
+
+method: GET
+params:
+  view chapters
+
+example:
+GET api.zhuishushenqi.com/toc/577b477dbd86a4bd3f8bf1b2?view=chapters
+
+{
+  "mixToc":
+    {
+      "_id":"5b450012535c163fba0ff130",
+      "book":"5b3f4b75fe4cf967aa6aff75",
+      "chaptersUpdated":"2019-04-08T13:15:48.344Z",
+      "chapters":[
+        {
+        "title":"第1章 亡灵学徒",
+        "link":"http://book.my716.com/getBooks.aspx?method=content&bookId=2603325&chapterFile=U_2603325_201807061820404653_8865_1.txt",
+        "unreadble":false
+        },
+        {
+        "title":"第2章 寒冰心脏",
+        "link":"http://book.my716.com/getBooks.aspx?method=content&bookId=2603325&chapterFile=U_2603325_201807061820405837_9625_2.txt",
+        "unreadble":false
+        },
+        ..........
+      ],
+      "updated":"2019-04-08T13:15:48.344Z"
+    },
+  "ok":true
+}
+```
+
+
+
+```json
 url: api.zhuishushenqi.com/toc/书源ID?view=chapters
+
 method: GET
 params:
   view chapters
