@@ -56,6 +56,7 @@ class DownloadBook(object):
         content = json.loads(html.text)['chapter']['body']
         return content
 
+
 class ZhuishuSpider(object):
 
     def __init__(self):
