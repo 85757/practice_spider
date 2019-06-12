@@ -25,8 +25,9 @@ class ToutiaoImageSpider():
         '''
         timestamp = str(round(time.time() * 1000))
         url = self.url.format(offset=self.offset,keyword=self.keyword,timestamp=timestamp)
-        html = requests.get(url)
-        data = json.loads(html.content)
+        print(url)
+        response = requests.get(url)
+        data = json.loads(response.content)
         for i in data['data']:
             self.save_image(i)
 
